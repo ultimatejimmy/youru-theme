@@ -1,10 +1,10 @@
 <?php
 /**
- * Gutenbergtheme functions and definitions
+ * yourutheme functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Gutenbergtheme
+ * @package yourutheme
  */
 
 if ( ! function_exists( 'gutenbergtheme_setup' ) ) :
