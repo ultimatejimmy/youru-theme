@@ -480,16 +480,29 @@ textarea {
 # Logo/header
 --------------------------------------------------------------*/
 header#masthead {
+  height: 120px;
+}
+header#masthead .wrapper {
   background-color: #014455;
   height: 100px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  flex-flow: wrap;
 }
-header#masthead .site-branding {
+@media (max-width: 600px) {
+  header#masthead .wrapper {
+    height: auto;
+  }
+}
+header#masthead .wrapper .site-branding {
   margin: 0;
   overflow: hidden;
   text-align: inherit;
   height: 120px;
+  flex: 1 0 auto;
 }
-header#masthead .site-branding .header__bg__gray {
+header#masthead .wrapper .site-branding .header__bg__gray {
   position: relative;
   width: 400px;
   height: 120px;
@@ -500,8 +513,9 @@ header#masthead .site-branding .header__bg__gray {
   background-color: #eeeef0;
   transform: skewX(-35deg);
   transform-origin: top left;
+  z-index: 12;
 }
-header#masthead .site-branding .header__bg__orange {
+header#masthead .wrapper .site-branding .header__bg__orange {
   position: relative;
   top: 0;
   bottom: 0;
@@ -512,13 +526,59 @@ header#masthead .site-branding .header__bg__orange {
   background-color: #da6426;
   transform: skewX(-35deg);
   transform-origin: top left;
+  z-index: 11;
 }
-header#masthead .site-branding .custom-logo {
+header#masthead .wrapper .site-branding .custom-logo {
   z-index: 10;
   position: absolute;
   width: 320px;
   top: 0;
   padding: 20px 0 0 20px;
+  z-index: 13;
+}
+header#masthead .wrapper #site-navigation {
+  flex-flow: column wrap;
+  flex: 1 0 auto;
+  background-color: #014455;
+  margin-top: -20px;
+}
+header#masthead .wrapper #site-navigation ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+header#masthead .wrapper #site-navigation ul a {
+  padding: 15px 25px;
+  color: #fff;
+  display: block;
+  text-decoration: none;
+}
+header#masthead .wrapper #site-navigation ul a:hover {
+  background-color: #01667f;
+  text-decoration: underline;
+}
+@media (max-width: 1020px) {
+  header#masthead .wrapper {
+    height: auto;
+  }
+  header#masthead .wrapper #site-navigation {
+    margin-top: 0;
+  }
+  header#masthead .wrapper #site-navigation ul {
+    justify-content: space-around;
+  }
+}
+@media (max-width: 600px) {
+  header#masthead .wrapper #site-navigation ul {
+    flex-flow: column wrap;
+  }
+  header#masthead .wrapper #site-navigation ul a {
+    padding: 10px 20px;
+  }
 }
 /*--------------------------------------------------------------
 # Navigation
@@ -547,77 +607,6 @@ a:active {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-.main-navigation {
-  clear: both;
-  display: block;
-  margin: 0 50px 0 0;
-  text-align: center;
-}
-.main-navigation ul {
-  display: none;
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
-}
-.main-navigation ul ul {
-  box-shadow: 0 3px 3px rgba(0,0,0,0.2);
-  float: left;
-  position: absolute;
-  top: 100%;
-  left: -999em;
-  z-index: 99999;
-  text-align: left;
-}
-.main-navigation ul ul ul {
-  left: -999em;
-  top: 0;
-}
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
-  left: 100%;
-}
-.main-navigation ul ul a {
-  width: 200px;
-}
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-  display: block;
-  left: auto;
-}
-.main-navigation li {
-  position: relative;
-}
-.main-navigation a {
-  display: block;
-  text-decoration: none;
-  color: #fff;
-}
-.menu-toggle {
-  padding: 1em;
-}
-@media screen and (max-width: 37.5em) {
-  .menu-toggle,
-  .main-navigation.toggled ul {
-    display: block;
-    margin: 0 auto;
-  }
-}
-@media screen and (min-width: 37.5em) {
-  .menu-toggle {
-    display: none;
-  }
-  .main-navigation ul {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    float: right;
-    position: relative;
-    top: -85px;
-  }
-  .main-navigation a {
-    padding: 0 0.5em;
-  }
-}
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
@@ -735,6 +724,11 @@ a:active {
 #page {
   margin: 0 auto;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#page > * {
+  flex: 1 100%;
 }
 .site-branding {
   text-align: center;

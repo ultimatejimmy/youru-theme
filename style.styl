@@ -497,43 +497,91 @@ textarea {
 --------------------------------------------------------------*/
 headerHeight = 100px
 headerWidth = 400px
+breakpoint1 = 1020px
+breakpoint2 = 600px
 
-header#masthead
-	background-color #014455
-	height headerHeight
-	.site-branding
-		margin 0
-		overflow hidden
-		text-align inherit
-		height headerHeight + 20
-		.header__bg__gray
-			position: relative;
-			width headerWidth
-			height: headerHeight + 20
-			top -(@height - 10)
-			bottom: 0;
-			right: 0;
-			left: 0;
-			background-color dm_gray
-			transform: skewX(-35deg);
-			transform-origin: top left; 
-		.header__bg__orange
-			position: relative;
-			top: 0
-			bottom: 0;
-			right: 0;
-			left: 0;
-			width headerWidth + 20
-			height: headerHeight + 10
-			background-color dm_orange
-			transform: skewX(-35deg);
-			transform-origin: top left;
-		.custom-logo
-			z-index: 10;
-			position: absolute;
-			width: headerWidth * .8
-			top: 0;
-			padding: 20px 0 0 20px;
+header#masthead 
+	height headerHeight + 20
+	.wrapper
+		background-color #014455
+		height headerHeight
+		z-index 10
+		display flex
+		align-items center
+		flex-flow wrap
+		@media (max-width breakpoint2)
+			height auto
+		.site-branding
+			margin 0
+			overflow hidden
+			text-align inherit
+			height headerHeight + 20
+			flex 1 0 auto
+			.header__bg__gray
+				position: relative;
+				width headerWidth
+				height: headerHeight + 20
+				top -(@height - 10)
+				bottom: 0;
+				right: 0;
+				left: 0;
+				background-color dm_gray
+				transform: skewX(-35deg);
+				transform-origin: top left; 
+				z-index 12
+			.header__bg__orange
+				position: relative;
+				top: 0
+				bottom: 0;
+				right: 0;
+				left: 0;
+				width headerWidth + 20
+				height: headerHeight + 10
+				background-color dm_orange
+				transform: skewX(-35deg);
+				transform-origin: top left;
+				z-index 11
+			.custom-logo
+				z-index: 10;
+				position: absolute;
+				width: headerWidth * .8
+				top: 0;
+				padding: 20px 0 0 20px;
+				z-index 13
+		#site-navigation 
+			flex-flow column wrap
+			flex 1 0 auto
+			background-color dm_blue
+			margin-top -20px
+			ul
+				display: flex;
+				justify-content: center;
+				flex-wrap: wrap;
+				justify-content flex-end
+				list-style none
+				margin 0
+				padding 0
+				a
+					padding: 15px 25px
+					color white
+					display block
+					text-decoration none
+					&:hover
+						background-color lighten(dm_blue, 10%)
+						text-decoration underline
+		@media (max-width breakpoint1)
+			height auto
+			#site-navigation 
+				margin-top 0
+				ul
+					justify-content space-around
+		@media (max-width breakpoint2)
+			#site-navigation ul
+				flex-flow column wrap
+				a
+					padding 10px 20px
+
+			
 
 
 
@@ -569,78 +617,8 @@ a:active {
 ## Menus
 --------------------------------------------------------------*/
 
-.main-navigation {
-	clear: both;
-	display: block;
-	margin: 0 50px 0 0;
-	text-align: center;
-}
-.main-navigation ul {
-	display: none;
-	list-style: none;
-	margin: 0;
-	padding-left: 0;
-}
-.main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	float: left;
-	position: absolute;
-	top: 100%;
-	left: -999em;
-	z-index: 99999;
-	text-align: left;
-}
-.main-navigation ul ul ul {
-	left: -999em;
-	top: 0;
-}
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
-	left: 100%;
-}
-.main-navigation ul ul a {
-	width: 200px;
-}
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-	display: block;
-	left: auto;
-}
-.main-navigation li {
-	position: relative;
-}
-.main-navigation a {
-	display: block;
-	text-decoration: none;
-	color white
-}
-.menu-toggle {
-	padding: 1em;
-}
-@media screen and (max-width: 37.5em) {
-	/* Small menu. */
-	.menu-toggle,
-	.main-navigation.toggled ul {
-		display: block;
-		margin: 0 auto;
-	}
-}
-@media screen and (min-width: 37.5em) {
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation ul {
-		display: flex;
-		justify-content: center;
-		flex-wrap: wrap;
-		float right
-		position relative
-		top -85px
-	}
-	.main-navigation a {
-		padding: 0 .5em;
-	}
-}
+
+	
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
@@ -767,11 +745,14 @@ a:active {
 # Content
 --------------------------------------------------------------*/
 
-#page {
+#page
 	margin: 0 auto;
-//	max-width: 1200px;
 	width 100%
-}
+	display flex
+	flex-direction column
+	& > *
+		flex: 1 100%;
+		
 .site-branding {
 	text-align: center;
 	margin: 60px 0;
