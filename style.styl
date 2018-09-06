@@ -1,10 +1,11 @@
 /*
 Theme Name: YourU 
 Theme URI: https://github.com/ultimatejimmy/youru-theme
-Author: wordpressdotorg
-Author URI: https://wordpress.org
-Description: A demo theme for showcasing web profiles
-Version: 2018.8.28
+GitHub Theme URI: https://github.com/ultimatejimmy/youru-theme
+Author: Jimmy Pautz
+Author URI: https://jimmypautz.com
+Description: A demo theme for showcasing DM web profiles
+Version: 2018.9.5
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: yourutheme
@@ -47,6 +48,14 @@ dm_gray = #EEEEF0
 dm_orange = #DA6426
 dm_blue = #014455
 
+dm_grayA(A)
+	rgba(238, 238, 240, A)
+dm_orangeA(A)
+	rgba(218, 100, 38, A)	
+dm_blueA(A)
+	rgba(1, 68, 85, A)
+	
+
 
 /*--------------------------------------------------------------
 # Normalize
@@ -60,6 +69,14 @@ html {
 body {
 	margin: 0;
 }
+
+html, body
+	height 100%
+	
+body
+	display: flex;
+	flex-direction: column;
+
 article,
 aside,
 details,
@@ -74,6 +91,14 @@ section,
 summary {
 	display: block;
 }
+
+main
+	flex 1 0 auto
+
+footer#colophon
+	flex none
+	flex-shrink 0
+
 audio,
 canvas,
 progress,
@@ -360,6 +385,7 @@ html {
 body {
 	background: #fff;
 	/* Fallback for when there is no custom background color defined. */
+	overflow-x hidden
 }
 blockquote,
 q {
@@ -543,11 +569,12 @@ header#masthead
 				z-index 11
 			.custom-logo
 				z-index: 10;
-				position: absolute;
 				width: headerWidth * .8
 				top: 0;
 				padding: 20px 0 0 20px;
 				z-index 13
+				transform: skewX(35deg);
+				transform-origin: top left;
 		#site-navigation 
 			flex-flow column wrap
 			flex 1 0 auto
@@ -588,7 +615,96 @@ header#masthead
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
+siteInfoHeight = 110px
 
+#colophon
+	background-image url(assets/images/footer-photograph.jpeg)
+	background-size cover
+	overflow hidden
+	nav
+		background-color dm_orangeA(.85)
+		height 125px
+		display flex
+		flex-direction column
+		justify-content center
+		ul
+			display: flex;
+			flex-wrap: wrap;
+			justify-content	center
+			list-style none
+			margin 0
+			padding 0
+			align-content center
+			li
+				a
+					padding 15px 25px
+					color white
+	.site-info
+		background-color dm_blueA(.85)
+		width 100%
+		height siteInfoHeight
+		.footer-info
+			color white
+			margin 0 auto
+			max-width: 800px;
+			padding-left: 14px;
+			padding-right: 14px;
+			display flex
+			justify-content space-around
+			@media (min-width 768px)
+				padding-left: 0px;
+				padding-right: 0px;
+			@media (max-width 636px)
+				display none
+			.footer-widget
+				float left
+				margin 5px 15px
+				p
+					margin 0
+					line-height 1.5
+				h2
+					color white
+					font-size 16px
+					margin 0
+				
+	.shapes
+		float right
+		position: relative;
+		top: -10px;
+		left: 10px;
+		height: siteInfoHeight
+		.header__bg__gray
+			position: relative;
+			width headerWidth
+			height: siteInfoHeight + 25
+			top -(siteInfoHeight + 16)
+			bottom: 0;
+			right: -10px;
+			background-color dm_grayA(.9)
+			transform: skewX(-35deg);
+			transform-origin: bottom right; 
+			z-index 12
+			box-shadow: 0 5px 10px black
+		.header__bg__orange
+			position: relative;
+			width headerWidth + 20
+			height: siteInfoHeight + 15
+			background-color dm_orangeA(.85)
+			transform: skewX(-35deg);
+			transform-origin: bottom right;
+			z-index 11
+			box-shadow: 0px 3px 10px black;
+		.custom-logo
+			z-index: 10;
+			width: headerWidth * .8
+			top: 5px;
+			padding: 20px 0 0 20px;
+			z-index 13
+			transform: skewX(35deg);
+			transform-origin: bottom right;
+			position: relative;
+			left: 45px;
+				
 
 /*--------------------------------------------------------------
 ## Links
@@ -746,21 +862,20 @@ a:active {
 --------------------------------------------------------------*/
 
 #page
+	height 100%
 	margin: 0 auto;
 	width 100%
 	display flex
 	flex-direction column
 	& > *
 		flex: 1 100%;
-		
+	header
+		flex 1
 .site-branding {
 	text-align: center;
 	margin: 60px 0;
 }
-.site-footer {
-	margin: 1em 0;
-	opacity: 0.5;
-}
+
 
 /*--------------------------------------------------------------
 ## Posts and pages
@@ -787,7 +902,6 @@ a:active {
 .entry-header,
 .page-header,
 .entry-footer,
-.site-info,
 .post-navigation,
 .page-navigation,
 .comments-area,
@@ -814,7 +928,6 @@ a:active {
 	.entry-header,
 	.page-header,
 	.entry-footer,
-	.site-info,
 	.post-navigation,
 	.page-navigation,
 	.comments-area,

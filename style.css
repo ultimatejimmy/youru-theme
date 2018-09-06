@@ -1,10 +1,11 @@
 /*
 Theme Name: YourU 
 Theme URI: https://github.com/ultimatejimmy/youru-theme
-Author: wordpressdotorg
-Author URI: https://wordpress.org
-Description: A demo theme for showcasing web profiles
-Version: 2018.8.28
+GitHub Theme URI: https://github.com/ultimatejimmy/youru-theme
+Author: Jimmy Pautz
+Author URI: https://jimmypautz.com
+Description: A demo theme for showcasing DM web profiles
+Version: 2018.9.5
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: yourutheme
@@ -51,6 +52,14 @@ html {
 body {
   margin: 0;
 }
+html,
+body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
 article,
 aside,
 details,
@@ -64,6 +73,13 @@ nav,
 section,
 summary {
   display: block;
+}
+main {
+  flex: 1 0 auto;
+}
+footer#colophon {
+  flex: none;
+  flex-shrink: 0;
 }
 audio,
 canvas,
@@ -347,6 +363,7 @@ html {
 body {
   background: #fff;
 /* Fallback for when there is no custom background color defined. */
+  overflow-x: hidden;
 }
 blockquote,
 q {
@@ -530,11 +547,12 @@ header#masthead .wrapper .site-branding .header__bg__orange {
 }
 header#masthead .wrapper .site-branding .custom-logo {
   z-index: 10;
-  position: absolute;
   width: 320px;
   top: 0;
   padding: 20px 0 0 20px;
   z-index: 13;
+  transform: skewX(35deg);
+  transform-origin: top left;
 }
 header#masthead .wrapper #site-navigation {
   flex-flow: column wrap;
@@ -583,6 +601,110 @@ header#masthead .wrapper #site-navigation ul a:hover {
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
+#colophon {
+  background-image: url("assets/images/footer-photograph.jpeg");
+  background-size: cover;
+  overflow: hidden;
+}
+#colophon nav {
+  background-color: rgba(218,100,38,0.85);
+  height: 125px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#colophon nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-content: center;
+}
+#colophon nav ul li a {
+  padding: 15px 25px;
+  color: #fff;
+}
+#colophon .site-info {
+  background-color: rgba(1,68,85,0.85);
+  width: 100%;
+  height: 110px;
+}
+#colophon .site-info .footer-info {
+  color: #fff;
+  margin: 0 auto;
+  max-width: 800px;
+  padding-left: 14px;
+  padding-right: 14px;
+  display: flex;
+  justify-content: space-around;
+}
+@media (min-width: 768px) {
+  #colophon .site-info .footer-info {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+@media (max-width: 636px) {
+  #colophon .site-info .footer-info {
+    display: none;
+  }
+}
+#colophon .site-info .footer-info .footer-widget {
+  float: left;
+  margin: 5px 15px;
+}
+#colophon .site-info .footer-info .footer-widget p {
+  margin: 0;
+  line-height: 1.5;
+}
+#colophon .site-info .footer-info .footer-widget h2 {
+  color: #fff;
+  font-size: 16px;
+  margin: 0;
+}
+#colophon .shapes {
+  float: right;
+  position: relative;
+  top: -10px;
+  left: 10px;
+  height: 110px;
+}
+#colophon .shapes .header__bg__gray {
+  position: relative;
+  width: 400px;
+  height: 135px;
+  top: -126px;
+  bottom: 0;
+  right: -10px;
+  background-color: rgba(238,238,240,0.9);
+  transform: skewX(-35deg);
+  transform-origin: bottom right;
+  z-index: 12;
+  box-shadow: 0 5px 10px #000;
+}
+#colophon .shapes .header__bg__orange {
+  position: relative;
+  width: 420px;
+  height: 125px;
+  background-color: rgba(218,100,38,0.85);
+  transform: skewX(-35deg);
+  transform-origin: bottom right;
+  z-index: 11;
+  box-shadow: 0px 3px 10px #000;
+}
+#colophon .shapes .custom-logo {
+  z-index: 10;
+  width: 320px;
+  top: 5px;
+  padding: 20px 0 0 20px;
+  z-index: 13;
+  transform: skewX(35deg);
+  transform-origin: bottom right;
+  position: relative;
+  left: 45px;
+}
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
@@ -722,6 +844,7 @@ a:active {
 # Content
 --------------------------------------------------------------*/
 #page {
+  height: 100%;
   margin: 0 auto;
   width: 100%;
   display: flex;
@@ -730,13 +853,12 @@ a:active {
 #page > * {
   flex: 1 100%;
 }
+#page header {
+  flex: 1;
+}
 .site-branding {
   text-align: center;
   margin: 60px 0;
-}
-.site-footer {
-  margin: 1em 0;
-  opacity: 0.5;
 }
 /*--------------------------------------------------------------
 ## Posts and pages
@@ -762,7 +884,6 @@ a:active {
 .entry-header,
 .page-header,
 .entry-footer,
-.site-info,
 .post-navigation,
 .page-navigation,
 .comments-area,
@@ -789,7 +910,6 @@ a:active {
   .entry-header,
   .page-header,
   .entry-footer,
-  .site-info,
   .post-navigation,
   .page-navigation,
   .comments-area,

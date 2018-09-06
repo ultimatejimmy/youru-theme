@@ -11,22 +11,38 @@
 
 ?>
 
-<footer id="colophon" class="site-footer">
-	<div class="site-info">
-		<a href="<?php echo esc_url( __( 'https://wordpress.org/', '_s' ) ); ?>"><?php
-			/* translators: %s: CMS name, i.e. WordPress. */
-			printf( esc_html__( 'Proudly powered by %s', 'gutenbergtheme' ), 'WordPress' );
-		?></a>
-		<span class="sep"> | </span>
-		<?php
-			/* translators: 1: Theme name, 2: Theme author. */
-			printf( esc_html__( 'Theme: %s', 'gutenbergtheme' ), '<a href="https://github.com/WordPress/gutenberg-starter-theme/">Gutenberg</a>' );
-		?>
-	</div><!-- .site-info -->
-</footer><!-- #colophon -->
-</div><!-- #page -->
+	<footer id="colophon" class="site-footer">
+		<nav id="footer-navigation" class="main-navigation">
+			<?php
+					wp_nav_menu( array(
+						'theme_location' => 'menu-2',
+						'menu_id'        => 'footer-menu',
+					) );
+				?>
+		</nav>
+		<div class="shapes">
 
-<?php wp_footer(); ?>
 
-</body>
-</html>
+			<div class="header__bg__orange"></div>
+			<div class="header__bg__gray">
+
+				<?php the_custom_logo(); ?>
+			</div>
+
+		</div>
+		<div class="site-info">
+			<div class="footer-info">
+				<?php dynamic_sidebar( 'footer' ); ?>
+			</div>
+		</div>
+		<!-- .site-info -->
+	</footer>
+	<!-- #colophon -->
+	</div>
+	<!-- #page -->
+
+	<?php wp_footer(); ?>
+
+		</body>
+
+		</html>
