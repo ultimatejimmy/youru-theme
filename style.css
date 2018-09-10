@@ -5,7 +5,7 @@ GitHub Theme URI: https://github.com/ultimatejimmy/youru-theme
 Author: Jimmy Pautz
 Author URI: https://jimmypautz.com
 Description: A demo theme for showcasing DM web profiles
-Version: 2018.9.6.1
+Version: 2018.9.10
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: youru-theme
@@ -496,9 +496,6 @@ textarea {
 /*--------------------------------------------------------------
 # Logo/header
 --------------------------------------------------------------*/
-header#masthead {
-  height: 120px;
-}
 header#masthead .wrapper {
   background-color: #014455;
   height: 100px;
@@ -633,12 +630,10 @@ header#masthead .wrapper #site-navigation ul a:hover {
 }
 #colophon .site-info .footer-info {
   color: #fff;
-  margin: 0 auto;
-  max-width: 800px;
   padding-left: 14px;
   padding-right: 14px;
-  display: flex;
-  justify-content: space-around;
+  max-width: 636px;
+  margin: 0 auto;
 }
 @media (min-width: 768px) {
   #colophon .site-info .footer-info {
@@ -652,7 +647,7 @@ header#masthead .wrapper #site-navigation ul a:hover {
   }
 }
 #colophon .site-info .footer-info .footer-widget {
-  float: left;
+  display: inline-block;
   margin: 5px 15px;
 }
 #colophon .site-info .footer-info .footer-widget p {
