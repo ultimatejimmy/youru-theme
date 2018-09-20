@@ -1,8 +1,9 @@
-# Gutenberg theme
-This theme is designed to showcase what Gutenberg can do with regards to themes. It is intended as a work in progress, at least until v1 of the new editor (and maybe beyond).
+This theme is meant to showcase web profiles.  
 
-# Block focused
-If something isn't a block yet, this theme will not have it. As each block happens, the theme will gain that functionality.
+# Gutenberg-ready
 
-# Styling just like Gutenberg
-The idea of the default look for this theme is to as closely replicate that of the Gutenberg editor output as possible. As a result the focus is on that styling not creating a new look.. yet. As things grow, we may have styles and go further into what the theme can have... who knows.
+This theme works well with Gutenberg, as it is based on a Gutenberg starter theme.
+
+# Custom web profile styles
+
+See `css/webprofiles.styl` or `css/webprofiles.css` for theme-specific style for the tabbed web profile theme.

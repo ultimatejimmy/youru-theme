@@ -1,11 +1,11 @@
-.entry-content > * {
+.entry-content {
   margin: 36px auto;
-  max-width: 636px;
+  max-width: 1024px;
   padding-left: 14px;
   padding-right: 14px;
 }
-@media (min-width: 768px) {
-  .entry-content > * {
+@media (min-width: 1124px) {
+  .entry-content {
     padding-left: 0px;
     padding-right: 0px;
   }
@@ -20,11 +20,11 @@
 .entry-content ul,
 .entry-content ol {
   margin: 1.5em auto;
-  max-width: 636px;
+  max-width: 1024px;
   list-style-position: outside;
 }
 .wp-block-video video {
-  max-width: 636px;
+  max-width: 1024px;
 }
 .wp-block-image img {
   display: block;

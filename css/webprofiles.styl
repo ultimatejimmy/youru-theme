@@ -1,0 +1,163 @@
+maxWidth = 1024px
+
+/* Directory customization */
+
+.faculty-card {
+	background-color: hsl(0, 0%, 96%);
+	padding: 0.5em 0.5em 0.5em 7em;
+	margin: 0 0 1em;
+	max-width: none;
+	width: (maxWidth/2) - 12
+	border: 0.125em solid hsl(0, 0%, 70%);
+	transition: border-color 100ms ease-in-out;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI4IiBoZWlnaHQ9IjE2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cGF0aCBmaWxsPSIjRTZFNkU2IiBkPSJNMCAwSDEyOFYxNjRIMHoiLz4KICA8cGF0aCBkPSJNNjQuMDY0NSA5NS40Mjg2Qzc4LjMzNDggOTUuNDI4NiA4OS45MDMyIDgzLjkxNTkgODkuOTAzMiA2OS43MTQzIDg5LjkwMzIgNTUuNTEyNyA3OC4zMzQ4IDQ0IDY0LjA2NDUgNDQgNDkuNzk0MiA0NCAzOC4yMjU4IDU1LjUxMjcgMzguMjI1OCA2OS43MTQzIDM4LjIyNTggODMuOTE1OSA0OS43OTQyIDk1LjQyODYgNjQuMDY0NSA5NS40Mjg2ek02NC4wNjQ1IDEwNEM0MC4yODA2IDEwNCAyMSAxMjMuMjgxIDIxIDE0Ny4wNjVWMTY0SDEwNy4xMjlWMTQ3LjA2NUMxMDcuMTI5IDEyMy4yODEgODcuODQ4NCAxMDQgNjQuMDY0NSAxMDR6IiBmaWxsPSIjMzMzIi8+Cjwvc3ZnPg==");
+}
+
+.faculty-card:hover {
+	border-color: hsl(0, 0%, 50%);
+}
+
+.entry-content::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.page-id-52 .entry-content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.faculty-name {
+	font-size: 1.5em;
+	font-weight: 700;
+}
+
+.faculty-position {
+	display: block;
+	font-style: italic;
+	margin-bottom: 0.5em;
+}
+
+/* Web profiles customizations */
+#dm-web-profile-root {
+	max-width: none;
+}
+
+.dm-profile-heading, .dm-profile-tabs__link {
+	font-family: "din-condensed-web", sans-serif;
+	text-transform: uppercase;
+}
+
+.dm-profile-activities {
+  font-family: "Noto Serif", Georgia, serif !important;
+	max-width: none !important;
+}
+
+.dm-profile-heading,
+.dm-profile-activities {
+	color: #014455;
+}
+
+
+.dm-profile-section--static {
+	padding: 1em !important;
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-size: cover;
+	background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI4IiBoZWlnaHQ9IjE2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cGF0aCBmaWxsPSIjRTZFNkU2IiBkPSJNMCAwSDEyOFYxNjRIMHoiLz4KICA8cGF0aCBkPSJNNjQuMDY0NSA5NS40Mjg2Qzc4LjMzNDggOTUuNDI4NiA4OS45MDMyIDgzLjkxNTkgODkuOTAzMiA2OS43MTQzIDg5LjkwMzIgNTUuNTEyNyA3OC4zMzQ4IDQ0IDY0LjA2NDUgNDQgNDkuNzk0MiA0NCAzOC4yMjU4IDU1LjUxMjcgMzguMjI1OCA2OS43MTQzIDM4LjIyNTggODMuOTE1OSA0OS43OTQyIDk1LjQyODYgNjQuMDY0NSA5NS40Mjg2ek02NC4wNjQ1IDEwNEM0MC4yODA2IDEwNCAyMSAxMjMuMjgxIDIxIDE0Ny4wNjVWMTY0SDEwNy4xMjlWMTQ3LjA2NUMxMDcuMTI5IDEyMy4yODEgODcuODQ4NCAxMDQgNjQuMDY0NSAxMDR6IiBmaWxsPSIjMzMzIi8+Cjwvc3ZnPg==");
+	position: relative;
+	z-index: 1;
+}
+
+.dm-profile-section--static::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: hsla(0, 0%, 0%, 0.625);
+	z-index: -1;
+}
+
+@media (min-width: 37.6525em) {
+	
+	.dm-profile-section--static {
+		padding: 2em 0 2em 16.5em !important;
+		background-position: left center;
+		background-size: contain;
+	}
+	
+	.dm-profile-section--static::after {
+		content: normal;
+	}
+}
+
+.dm-profile-section--static b {
+	text-transform: uppercase;
+	font-family: "din-condensed-web", sans-serif;
+}
+
+.dm-profile-section--static b span {
+	font-size: 2.5em !important;
+	line-height: 1.2;
+}
+
+.dm-profile-section--static .dm-profile-activities {
+	color: #fff;
+}
+
+.dm-profile-tabs {
+	margin: 1em auto !important;
+}
+
+.dm-profile-tabs__link {
+	font-size: 1.5em !important;
+	letter-spacing: 0.0375em;
+	font-weight: 400 !important;
+	padding: 0.125em 1em !important;
+	margin: 0 0.5em !important;
+	display: block;
+	background-color: #da6427;
+	transition: transform 100ms ease-in-out;
+	transform: translateY(0);
+}
+
+.dm-profile-tabs__link:visited {
+	color: #fff;
+}
+
+.dm-profile-tabs__link:hover {
+	color: white;
+	transform: translateY(-0.125em);
+}
+
+.dm-profile-tabs__item {
+	background-color: transparent !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+.dm-profile-tabs__item--active .dm-profile-tabs__link {
+	background-color: #014455;
+}
+
+.dm-profile-activities-group-item {
+	margin-left: 0 !important;
+}
+
+ol.dm-profile-activities,
+ul.dm-profile-activities,
+.dm-profile-activities-group {
+	margin: 0 !important;
+	max-width: none !important;
+}
+
+.dm-profile-activities li {
+	margin-left: 0;
+	margin-bottom: 0;
+}

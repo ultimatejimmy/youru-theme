@@ -170,6 +170,7 @@ function yourutheme_scripts() {
 	wp_enqueue_style( 'gutenbergbase-style', get_stylesheet_uri() );
 
 	wp_enqueue_style( 'youruthemeblocks-style', get_template_directory_uri() . '/css/blocks.css' );
+	wp_enqueue_style( 'youru-profile', get_template_directory_uri() . '/css/webprofiles.css' );
 
 	wp_enqueue_style( 'yourutheme-fonts', yourutheme_fonts_url() );
 

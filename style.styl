@@ -56,7 +56,8 @@ dm_blueA(A)
 	rgba(1, 68, 85, A)
 	
 
-
+dinFont = "din-condensed-web", sans-serif;
+maxWidth = 1024px
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -131,6 +132,7 @@ strong {
 dfn {
 	font-style: italic;
 }
+
 h1 {
 	font-size: 2.44em;
 	margin: 0.67em 0;
@@ -290,10 +292,13 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6
 	color: #32373c;
 	clear: both;
-}
+	font-family: dinFont
+	text-transform uppercase
+	font-weight normal
+	
 .entry-header h1.entry-title {
 	font-size: 2.44em;
 	line-height: 1.4;
@@ -534,6 +539,7 @@ header#masthead
 		display flex
 		align-items center
 		flex-flow wrap
+		padding-right 2em
 		@media (max-width breakpoint2)
 			height auto
 		.site-branding
@@ -579,6 +585,9 @@ header#masthead
 			flex 1 0 auto
 			background-color dm_blue
 			margin-top -20px
+			font-family dinFont
+			font-size: 1.5em;
+			text-transform uppercase
 			ul
 				display: flex;
 				justify-content: center;
@@ -588,13 +597,32 @@ header#masthead
 				margin 0
 				padding 0
 				a
-					padding: 15px 25px
+					padding: 0.25em 1em
+					margin: 0 0.325em
+					position: relative;
+					z-index: 1;
 					color white
 					display block
 					text-decoration none
-					&:hover
+					letter-spacing: 0.0625ex
+					&::before
+						content: "";
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						background-color: transparent;
+						transition: background-color 100ms ease-in-out;
+						z-index: -1;
+						@media (min-width: 37.5625em)
+							transform: skewX(-35deg);
+					&:hover::before
 						background-color lighten(dm_blue, 10%)
-						text-decoration underline
+				.current-menu-item a::before,
+				.current-page-ancestor a::before
+					background-color: #01667f;
+					border-left: 0.25em solid #da6427;
 		@media (max-width breakpoint1)
 			height auto
 			#site-navigation 
@@ -612,7 +640,7 @@ header#masthead
 
 
 /*--------------------------------------------------------------
-# Navigation
+# footer
 --------------------------------------------------------------*/
 siteInfoHeight = 110px
 
@@ -646,7 +674,7 @@ siteInfoHeight = 110px
 			color white
 			padding-left: 14px;
 			padding-right: 14px;
-			max-width 636px
+			max-width maxWidth
 			margin 0 auto
 			@media (min-width 768px)
 				padding-left: 0px;
@@ -661,9 +689,9 @@ siteInfoHeight = 110px
 					line-height 1.5
 				h2
 					color white
-					font-size 16px
+					font-size 1.25em
 					margin 0
-				
+					font-weight normal
 	.shapes
 		float right
 		position: relative;
@@ -737,7 +765,7 @@ a:active {
 .site-main .post-navigation {
 	border-bottom: 1px solid #111;
 	margin: 0 auto 60px;
-	max-width: 636px;
+	max-width: maxWidth
 	overflow: hidden;
 	padding-bottom: 60px;
 }
@@ -806,7 +834,7 @@ a:active {
 
 .alignleft,
 .alignright {
-	max-width: 636px !important;
+	max-width: maxWidth !important;
 	/* Let's work to make this !important unnecessary */
 }
 .alignleft img,
@@ -907,7 +935,7 @@ a:active {
 	margin: 1.5em auto;
 	padding-left: 14px;
 	padding-right: 14px;
-	max-width: 636px;
+	max-width: maxWidth;
 }
 .entry-header .wp-post-image {
 	margin-bottom: 1.5em;
@@ -921,7 +949,7 @@ a:active {
 	padding-bottom: 40px;
 	border-bottom: 1px solid #111;
 }
-@media screen and (min-width: 664px) {
+@media (min-width maxWidth+100px )
 	.entry-header,
 	.page-header,
 	.entry-footer,
@@ -929,11 +957,9 @@ a:active {
 	.page-navigation,
 	.comments-area,
 	.not-found .page-content,
-	.search .entry-summary {
+	.search .entry-summary 
 		padding-left: 0;
 		padding-right: 0;
-	}
-}
 
 /*--------------------------------------------------------------
 ## Comments

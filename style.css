@@ -273,6 +273,9 @@ h5,
 h6 {
   color: #32373c;
   clear: both;
+  font-family: "din-condensed-web", sans-serif;
+  text-transform: uppercase;
+  font-weight: normal;
 }
 .entry-header h1.entry-title {
   font-size: 2.44em;
@@ -503,6 +506,7 @@ header#masthead .wrapper {
   display: flex;
   align-items: center;
   flex-flow: wrap;
+  padding-right: 2em;
 }
 @media (max-width: 600px) {
   header#masthead .wrapper {
@@ -556,6 +560,9 @@ header#masthead .wrapper #site-navigation {
   flex: 1 0 auto;
   background-color: #014455;
   margin-top: -20px;
+  font-family: "din-condensed-web", sans-serif;
+  font-size: 1.5em;
+  text-transform: uppercase;
 }
 header#masthead .wrapper #site-navigation ul {
   display: flex;
@@ -567,14 +574,38 @@ header#masthead .wrapper #site-navigation ul {
   padding: 0;
 }
 header#masthead .wrapper #site-navigation ul a {
-  padding: 15px 25px;
+  padding: 0.25em 1em;
+  margin: 0 0.325em;
+  position: relative;
+  z-index: 1;
   color: #fff;
   display: block;
   text-decoration: none;
+  letter-spacing: 0.0625ex;
 }
-header#masthead .wrapper #site-navigation ul a:hover {
+header#masthead .wrapper #site-navigation ul a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  transition: background-color 100ms ease-in-out;
+  z-index: -1;
+}
+@media (min-width: 37.5625em) {
+  header#masthead .wrapper #site-navigation ul a::before {
+    transform: skewX(-35deg);
+  }
+}
+header#masthead .wrapper #site-navigation ul a:hover::before {
   background-color: #01667f;
-  text-decoration: underline;
+}
+header#masthead .wrapper #site-navigation ul .current-menu-item a::before,
+header#masthead .wrapper #site-navigation ul .current-page-ancestor a::before {
+  background-color: #01667f;
+  border-left: 0.25em solid #da6427;
 }
 @media (max-width: 1020px) {
   header#masthead .wrapper {
@@ -596,7 +627,7 @@ header#masthead .wrapper #site-navigation ul a:hover {
   }
 }
 /*--------------------------------------------------------------
-# Navigation
+# footer
 --------------------------------------------------------------*/
 #colophon {
   background-image: url("assets/images/footer-photograph.jpeg");
@@ -632,7 +663,7 @@ header#masthead .wrapper #site-navigation ul a:hover {
   color: #fff;
   padding-left: 14px;
   padding-right: 14px;
-  max-width: 636px;
+  max-width: 1024px;
   margin: 0 auto;
 }
 @media (min-width: 768px) {
@@ -656,8 +687,9 @@ header#masthead .wrapper #site-navigation ul a:hover {
 }
 #colophon .site-info .footer-info .footer-widget h2 {
   color: #fff;
-  font-size: 16px;
+  font-size: 1.25em;
   margin: 0;
+  font-weight: normal;
 }
 #colophon .shapes {
   float: right;
@@ -729,7 +761,7 @@ a:active {
 .site-main .post-navigation {
   border-bottom: 1px solid #111;
   margin: 0 auto 60px;
-  max-width: 636px;
+  max-width: 1024px;
   overflow: hidden;
   padding-bottom: 60px;
 }
@@ -790,7 +822,7 @@ a:active {
 --------------------------------------------------------------*/
 .alignleft,
 .alignright {
-  max-width: 636px !important;
+  max-width: 1024px !important;
 /* Let's work to make this !important unnecessary */
 }
 .alignleft img,
@@ -887,7 +919,7 @@ a:active {
   margin: 1.5em auto;
   padding-left: 14px;
   padding-right: 14px;
-  max-width: 636px;
+  max-width: 1024px;
 }
 .entry-header .wp-post-image {
   margin-bottom: 1.5em;
@@ -901,7 +933,7 @@ a:active {
   padding-bottom: 40px;
   border-bottom: 1px solid #111;
 }
-@media screen and (min-width: 664px) {
+@media (min-width: 1124px) {
   .entry-header,
   .page-header,
   .entry-footer,
