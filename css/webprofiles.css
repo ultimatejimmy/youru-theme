@@ -98,7 +98,7 @@
   letter-spacing: 0.0375em;
   font-weight: 400 !important;
   padding: 0.125em 1em !important;
-  margin: 0 0.5em !important;
+  margin: 0 0.5em 0.5em !important;
   display: block;
   background-color: #da6427;
   transition: transform 100ms ease-in-out;

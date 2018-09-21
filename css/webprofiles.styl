@@ -1,5 +1,8 @@
 maxWidth = 1024px
 
+profile-pic()
+	background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI4IiBoZWlnaHQ9IjE2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cGF0aCBmaWxsPSIjRTZFNkU2IiBkPSJNMCAwSDEyOFYxNjRIMHoiLz4KICA8cGF0aCBkPSJNNjQuMDY0NSA5NS40Mjg2Qzc4LjMzNDggOTUuNDI4NiA4OS45MDMyIDgzLjkxNTkgODkuOTAzMiA2OS43MTQzIDg5LjkwMzIgNTUuNTEyNyA3OC4zMzQ4IDQ0IDY0LjA2NDUgNDQgNDkuNzk0MiA0NCAzOC4yMjU4IDU1LjUxMjcgMzguMjI1OCA2OS43MTQzIDM4LjIyNTggODMuOTE1OSA0OS43OTQyIDk1LjQyODYgNjQuMDY0NSA5NS40Mjg2ek02NC4wNjQ1IDEwNEM0MC4yODA2IDEwNCAyMSAxMjMuMjgxIDIxIDE0Ny4wNjVWMTY0SDEwNy4xMjlWMTQ3LjA2NUMxMDcuMTI5IDEyMy4yODEgODcuODQ4NCAxMDQgNjQuMDY0NSAxMDR6IiBmaWxsPSIjMzMzIi8+Cjwvc3ZnPg==");
+
 /* Directory customization */
 
 .faculty-card {
@@ -12,7 +15,7 @@ maxWidth = 1024px
 	transition: border-color 100ms ease-in-out;
 	background-repeat: no-repeat;
 	background-size: contain;
-	background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI4IiBoZWlnaHQ9IjE2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cGF0aCBmaWxsPSIjRTZFNkU2IiBkPSJNMCAwSDEyOFYxNjRIMHoiLz4KICA8cGF0aCBkPSJNNjQuMDY0NSA5NS40Mjg2Qzc4LjMzNDggOTUuNDI4NiA4OS45MDMyIDgzLjkxNTkgODkuOTAzMiA2OS43MTQzIDg5LjkwMzIgNTUuNTEyNyA3OC4zMzQ4IDQ0IDY0LjA2NDUgNDQgNDkuNzk0MiA0NCAzOC4yMjU4IDU1LjUxMjcgMzguMjI1OCA2OS43MTQzIDM4LjIyNTggODMuOTE1OSA0OS43OTQyIDk1LjQyODYgNjQuMDY0NSA5NS40Mjg2ek02NC4wNjQ1IDEwNEM0MC4yODA2IDEwNCAyMSAxMjMuMjgxIDIxIDE0Ny4wNjVWMTY0SDEwNy4xMjlWMTQ3LjA2NUMxMDcuMTI5IDEyMy4yODEgODcuODQ4NCAxMDQgNjQuMDY0NSAxMDR6IiBmaWxsPSIjMzMzIi8+Cjwvc3ZnPg==");
+	profile-pic()
 }
 
 .faculty-card:hover {
@@ -62,13 +65,12 @@ maxWidth = 1024px
 	color: #014455;
 }
 
-
 .dm-profile-section--static {
 	padding: 1em !important;
 	background-repeat: no-repeat;
 	background-position: right center;
 	background-size: cover;
-	background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI4IiBoZWlnaHQ9IjE2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cGF0aCBmaWxsPSIjRTZFNkU2IiBkPSJNMCAwSDEyOFYxNjRIMHoiLz4KICA8cGF0aCBkPSJNNjQuMDY0NSA5NS40Mjg2Qzc4LjMzNDggOTUuNDI4NiA4OS45MDMyIDgzLjkxNTkgODkuOTAzMiA2OS43MTQzIDg5LjkwMzIgNTUuNTEyNyA3OC4zMzQ4IDQ0IDY0LjA2NDUgNDQgNDkuNzk0MiA0NCAzOC4yMjU4IDU1LjUxMjcgMzguMjI1OCA2OS43MTQzIDM4LjIyNTggODMuOTE1OSA0OS43OTQyIDk1LjQyODYgNjQuMDY0NSA5NS40Mjg2ek02NC4wNjQ1IDEwNEM0MC4yODA2IDEwNCAyMSAxMjMuMjgxIDIxIDE0Ny4wNjVWMTY0SDEwNy4xMjlWMTQ3LjA2NUMxMDcuMTI5IDEyMy4yODEgODcuODQ4NCAxMDQgNjQuMDY0NSAxMDR6IiBmaWxsPSIjMzMzIi8+Cjwvc3ZnPg==");
+	profile-pic()
 	position: relative;
 	z-index: 1;
 }
@@ -85,13 +87,13 @@ maxWidth = 1024px
 }
 
 @media (min-width: 37.6525em) {
-	
+
 	.dm-profile-section--static {
 		padding: 2em 0 2em 16.5em !important;
 		background-position: left center;
 		background-size: contain;
 	}
-	
+
 	.dm-profile-section--static::after {
 		content: normal;
 	}
@@ -120,7 +122,7 @@ maxWidth = 1024px
 	letter-spacing: 0.0375em;
 	font-weight: 400 !important;
 	padding: 0.125em 1em !important;
-	margin: 0 0.5em !important;
+	margin: 0 0.5em 0.5em !important;
 	display: block;
 	background-color: #da6427;
 	transition: transform 100ms ease-in-out;
