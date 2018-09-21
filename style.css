@@ -653,6 +653,13 @@ header#masthead .wrapper #site-navigation ul .current-page-ancestor a::before {
 #colophon nav ul li a {
   padding: 15px 25px;
   color: #fff;
+  font-family: "din-condensed-web", sans-serif;
+  font-size: 1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+#colophon nav ul li a:hover {
+  text-decoration: underline;
 }
 #colophon .site-info {
   background-color: rgba(1,68,85,0.85);
