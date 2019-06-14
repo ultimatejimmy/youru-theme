@@ -5,9 +5,6 @@ wm_primary2 = #353b48
 wm_accent1 = #c6b4e3
 wm_accent2 = #8b86ca
 
-profile-pic()
-	background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI4IiBoZWlnaHQ9IjE2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cGF0aCBmaWxsPSIjRTZFNkU2IiBkPSJNMCAwSDEyOFYxNjRIMHoiLz4KICA8cGF0aCBkPSJNNjQuMDY0NSA5NS40Mjg2Qzc4LjMzNDggOTUuNDI4NiA4OS45MDMyIDgzLjkxNTkgODkuOTAzMiA2OS43MTQzIDg5LjkwMzIgNTUuNTEyNyA3OC4zMzQ4IDQ0IDY0LjA2NDUgNDQgNDkuNzk0MiA0NCAzOC4yMjU4IDU1LjUxMjcgMzguMjI1OCA2OS43MTQzIDM4LjIyNTggODMuOTE1OSA0OS43OTQyIDk1LjQyODYgNjQuMDY0NSA5NS40Mjg2ek02NC4wNjQ1IDEwNEM0MC4yODA2IDEwNCAyMSAxMjMuMjgxIDIxIDE0Ny4wNjVWMTY0SDEwNy4xMjlWMTQ3LjA2NUMxMDcuMTI5IDEyMy4yODEgODcuODQ4NCAxMDQgNjQuMDY0NSAxMDR6IiBmaWxsPSIjMzMzIi8+Cjwvc3ZnPg==");
-
 /* Directory customization */
 
 .faculty-card {
@@ -20,7 +17,7 @@ profile-pic()
 	transition: border-color 100ms ease-in-out;
 	background-repeat: no-repeat;
 	background-size: contain;
-	profile-pic()
+	background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI4IiBoZWlnaHQ9IjE2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cGF0aCBmaWxsPSIjRTZFNkU2IiBkPSJNMCAwSDEyOFYxNjRIMHoiLz4KICA8cGF0aCBkPSJNNjQuMDY0NSA5NS40Mjg2Qzc4LjMzNDggOTUuNDI4NiA4OS45MDMyIDgzLjkxNTkgODkuOTAzMiA2OS43MTQzIDg5LjkwMzIgNTUuNTEyNyA3OC4zMzQ4IDQ0IDY0LjA2NDUgNDQgNDkuNzk0MiA0NCAzOC4yMjU4IDU1LjUxMjcgMzguMjI1OCA2OS43MTQzIDM4LjIyNTggODMuOTE1OSA0OS43OTQyIDk1LjQyODYgNjQuMDY0NSA5NS40Mjg2ek02NC4wNjQ1IDEwNEM0MC4yODA2IDEwNCAyMSAxMjMuMjgxIDIxIDE0Ny4wNjVWMTY0SDEwNy4xMjlWMTQ3LjA2NUMxMDcuMTI5IDEyMy4yODEgODcuODQ4NCAxMDQgNjQuMDY0NSAxMDR6IiBmaWxsPSIjMzMzIi8+Cjwvc3ZnPg==");
 }
 
 .faculty-card:hover {
@@ -67,7 +64,7 @@ profile-pic()
 
 .dm-profile-heading,
 .dm-profile-activities {
-	color: wm_primary2
+	color wm_primary2
 }
 
 .dm-profile-section--static b {
@@ -92,24 +89,21 @@ profile-pic()
 	margin: 1em auto !important;
 }
 
-.dm-profile-tabs__link {
+.dm-profile-tabs__link
 	font-size: 1.5em !important;
 	letter-spacing: 0.0375em;
 	font-weight: 400 !important;
 	padding: 0.125em 1em !important;
 	margin: 0 0.5em 0.5em !important;
-	display: block;
-	background-color #wm_primary1
-	transition: transform 100ms ease-in-out;
-	transform: translateY(0);
-}
+	display: block
+	transition transform 100ms ease-in-out
+	transform translateY(0)
+	background-color wm_primary1
 
-@media (max-width: 640px) {
-	.dm-profile-tabs__link {
+@media (max-width: 640px)
+	.dm-profile-tabs__link
 		text-align: left;
 		text-align: start;
-	}
-}
 
 .dm-profile-tabs__link:visited {
 	color: #fff;

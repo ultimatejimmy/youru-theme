@@ -167,7 +167,7 @@ function yourutheme_fonts_url() {
  * Enqueue scripts and styles.
  */
 function yourutheme_scripts() {
-	wp_enqueue_style( 'gutenbergbase-style', get_template_directory_uri() . '/style.css', array(), filemtime(get_template_directory() . '/style.css?v=201906142'), 'all' );
+	wp_enqueue_style( 'gutenbergbase-style', get_template_directory_uri() . '/style.css', array(), filemtime(get_template_directory() . '/style.css?v=201906143'), 'all' );
 
 	wp_enqueue_style( 'youruthemeblocks-style', get_template_directory_uri() . '/css/blocks.css', array(), filemtime(get_template_directory() . '/css/blocks.css'), 'all' );
 	wp_enqueue_style( 'youru-profile', get_template_directory_uri() . '/css/webprofiles.css', array(), filemtime(get_template_directory() . '/css/webprofiles.css'), 'all' );

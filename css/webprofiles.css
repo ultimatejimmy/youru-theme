@@ -48,7 +48,7 @@
 }
 .dm-profile-heading,
 .dm-profile-activities {
-  color: #014455;
+  color: #353b48;
 }
 .dm-profile-section--static b {
   text-transform: uppercase;
@@ -74,9 +74,9 @@
   padding: 0.125em 1em !important;
   margin: 0 0.5em 0.5em !important;
   display: block;
-  background-color: #da6427;
   transition: transform 100ms ease-in-out;
   transform: translateY(0);
+  background-color: #575195;
 }
 @media (max-width: 640px) {
   .dm-profile-tabs__link {
@@ -97,7 +97,7 @@
   margin: 0 !important;
 }
 .dm-profile-tabs__item--active .dm-profile-tabs__link {
-  background-color: #014455;
+  background-color: #353b48;
 }
 .dm-profile-activities-group-item {
   margin-left: 0 !important;
