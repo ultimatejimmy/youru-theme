@@ -34,6 +34,9 @@
   margin-bottom: 0.5em;
 }
 /* Web profiles customizations */
+.dm-profile-preamble {
+  background-color: #575195;
+}
 #dm-web-profile-root {
   max-width: none;
 }
