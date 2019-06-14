@@ -45,15 +45,17 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 //stylus variables
 dm_gray = #EEEEF0
-dm_orange = #DA6426
-dm_blue = #014455
+wm_primary1 = #575195
+wm_primary2 = #353b48
+wm_accent1 = #c6b4e3
+wm_accent2 = #8b86ca
 
 dm_grayA(A)
 	rgba(238, 238, 240, A)
-dm_orangeA(A)
-	rgba(218, 100, 38, A)
-dm_blueA(A)
-	rgba(1, 68, 85, A)
+wm_primary1A(A)
+	rgba(87, 81, 149, A)
+wm_primary2A(A)
+	rgba(53, 59, 72, A)
 
 
 dinFont = "din-condensed-web", sans-serif;
@@ -533,7 +535,7 @@ breakpoint2 = 600px
 
 header#masthead
 	.wrapper
-		background-color #014455
+		background-color wm_primary2
 		height headerHeight
 		z-index 10
 		display flex
@@ -568,7 +570,7 @@ header#masthead
 				left: 0;
 				width headerWidth + 20
 				height: headerHeight + 10
-				background-color dm_orange
+				background-color wm_primary1
 				transform: skewX(-35deg);
 				transform-origin: top left;
 				z-index 11
@@ -583,7 +585,7 @@ header#masthead
 		#site-navigation
 			flex-flow column wrap
 			flex 1 0 auto
-			background-color dm_blue
+			background-color wm_primary2
 			margin-top -20px
 			font-family dinFont
 			font-size: 1.5em;
@@ -618,11 +620,11 @@ header#masthead
 						@media (min-width: 37.5625em)
 							transform: skewX(-35deg);
 					&:hover::before
-						background-color lighten(dm_blue, 10%)
+						background-color lighten(wm_primary2, 10%)
 				.current-menu-item a::before,
 				.current-page-ancestor a::before
-					background-color: #01667f;
-					border-left: 0.25em solid #da6427;
+					background-color: wm_primary1;
+					border-left: 0.25em solid wm_accent1;
 		@media (max-width breakpoint1)
 			height auto
 			#site-navigation
@@ -649,7 +651,7 @@ siteInfoHeight = 110px
 	background-size cover
 	overflow hidden
 	nav
-		background-color dm_orangeA(.85)
+		background-color wm_primary1A(.85)
 		height 125px
 		display flex
 		flex-direction column
@@ -673,7 +675,7 @@ siteInfoHeight = 110px
 					&:hover
 						text-decoration underline
 	.site-info
-		background-color dm_blueA(.85)
+		background-color wm_primary2A(.85)
 		width 100%
 		height siteInfoHeight
 		.footer-info
@@ -720,7 +722,7 @@ siteInfoHeight = 110px
 			position: relative;
 			width headerWidth + 20
 			height: siteInfoHeight + 15
-			background-color dm_orangeA(.85)
+			background-color wm_primary1A(.85)
 			transform: skewX(-35deg);
 			transform-origin: bottom right;
 			z-index 11
@@ -742,7 +744,7 @@ siteInfoHeight = 110px
 --------------------------------------------------------------*/
 
 a {
-	color: #0073aa;
+	color: wm_primary1;
 }
 a:visited {
 	color: #333;
@@ -750,7 +752,7 @@ a:visited {
 a:hover,
 a:focus,
 a:active {
-	color: #00a0d2;
+	color: wm_primary2;
 }
 a:focus {
 	outline: thin dotted;
