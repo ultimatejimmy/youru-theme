@@ -5,7 +5,7 @@ GitHub Theme URI: https://github.com/ultimatejimmy/youru-theme
 Author: Jimmy Pautz
 Author URI: https://jimmypautz.com
 Description: A demo theme for showcasing DM web profiles
-Version: 2019.6.19.1
+Version: 2019.6.19.2
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: youru-theme
@@ -49,6 +49,7 @@ html {
   font-family: 'Barlow', sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
+  font-size: 17px;
 }
 body {
   margin: 0;
@@ -262,7 +263,7 @@ optgroup,
 textarea {
   color: #444;
   font-family: 'Barlow', sans-serif;
-  font-size: 16px;
+  font-size: 17px;
   font-size: 1rem;
   line-height: 1.8;
 }
@@ -562,7 +563,7 @@ header#masthead .wrapper #site-navigation {
   background-color: #353b48;
   margin-top: -20px;
   font-family: 'Barlow', sans-serif;
-  font-size: 1.5em;
+  font-size: 1.2rem;
   text-transform: uppercase;
 }
 header#masthead .wrapper #site-navigation ul {
