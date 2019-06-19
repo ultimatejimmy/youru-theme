@@ -44,28 +44,13 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 	## Galleries
 --------------------------------------------------------------*/
 //stylus variables
-dm_gray = #EEEEF0
-wm_primary1 = #575195
-wm_primary2 = #353b48
-wm_accent1 = #c6b4e3
-wm_accent2 = #8b86ca
-
-dm_grayA(A)
-	rgba(238, 238, 240, A)
-wm_primary1A(A)
-	rgba(87, 81, 149, A)
-wm_primary2A(A)
-	rgba(53, 59, 72, A)
-
-
-dinFont = "din-condensed-web", sans-serif;
-maxWidth = 1024px
+@require "css/common.styl"
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
 
 html {
-	font-family: sans-serif;
+	font-family theFont
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
 }
@@ -141,11 +126,11 @@ h1 {
 	line-height: 1.4;
 }
 h2 {
-	font-size: 1.95em;
+	font-size: 1.7em;
 	line-height: 1.4;
 }
 h3 {
-	font-size: 1.56em;
+	font-size: 1.4em;
 	line-height: 1.4;
 }
 h4 {
@@ -284,7 +269,7 @@ select,
 optgroup,
 textarea {
 	color: #444;
-	font-family: "Noto Serif", serif;
+	font-family theFont
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.8;
@@ -297,9 +282,9 @@ h5,
 h6
 	color: #32373c;
 	clear: both;
-	font-family: dinFont
+	font-family theFont
 	text-transform uppercase
-	font-weight normal
+	font-weight fontHeaderWeight
 
 .entry-header h1.entry-title {
 	font-size: 2.44em;
@@ -587,7 +572,7 @@ header#masthead
 			flex 1 0 auto
 			background-color wm_primary2
 			margin-top -20px
-			font-family dinFont
+			font-family theFont
 			font-size: 1.5em;
 			text-transform uppercase
 			ul
@@ -668,7 +653,7 @@ siteInfoHeight = 110px
 				a
 					padding 15px 25px
 					color white
-					font-family dinFont
+					font-family theFont
 					font-size 1.5em
 					text-decoration none
 					text-transform uppercase

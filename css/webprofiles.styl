@@ -1,9 +1,4 @@
-maxWidth = 1024px
-dm_gray = #EEEEF0
-wm_primary1 = #575195
-wm_primary2 = #353b48
-wm_accent1 = #c6b4e3
-wm_accent2 = #8b86ca
+@require "common.styl"
 
 /* Directory customization */
 
@@ -15,8 +10,6 @@ wm_accent2 = #8b86ca
 	width: (maxWidth/2) - 12
 	border: 0.125em solid hsl(0, 0%, 70%);
 	transition: border-color 100ms ease-in-out;
-	background-repeat: no-repeat;
-	background-size: contain;
 	background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI4IiBoZWlnaHQ9IjE2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cGF0aCBmaWxsPSIjRTZFNkU2IiBkPSJNMCAwSDEyOFYxNjRIMHoiLz4KICA8cGF0aCBkPSJNNjQuMDY0NSA5NS40Mjg2Qzc4LjMzNDggOTUuNDI4NiA4OS45MDMyIDgzLjkxNTkgODkuOTAzMiA2OS43MTQzIDg5LjkwMzIgNTUuNTEyNyA3OC4zMzQ4IDQ0IDY0LjA2NDUgNDQgNDkuNzk0MiA0NCAzOC4yMjU4IDU1LjUxMjcgMzguMjI1OCA2OS43MTQzIDM4LjIyNTggODMuOTE1OSA0OS43OTQyIDk1LjQyODYgNjQuMDY0NSA5NS40Mjg2ek02NC4wNjQ1IDEwNEM0MC4yODA2IDEwNCAyMSAxMjMuMjgxIDIxIDE0Ny4wNjVWMTY0SDEwNy4xMjlWMTQ3LjA2NUMxMDcuMTI5IDEyMy4yODEgODcuODQ4NCAxMDQgNjQuMDY0NSAxMDR6IiBmaWxsPSIjMzMzIi8+Cjwvc3ZnPg==");
 }
 
@@ -57,23 +50,24 @@ wm_accent2 = #8b86ca
 }
 
 .dm-profile-heading, .dm-profile-tabs__link {
-	font-family: "din-condensed-web", sans-serif;
+	font-family: theFont
 	text-transform: uppercase;
 }
 
 .dm-profile-activities {
-  font-family: "Noto Serif", Georgia, serif !important;
+  font-family: theFont
 	max-width: none !important;
 }
 
 .dm-profile-heading,
 .dm-profile-activities {
 	color wm_primary2
+	margin-bottom 1rem !important
 }
 
 .dm-profile-section--static b {
 	text-transform: uppercase;
-	font-family: "din-condensed-web", sans-serif;
+	font-family: theFont
 }
 
 .dm-profile-section--static b span {
@@ -91,6 +85,7 @@ wm_accent2 = #8b86ca
 
 .dm-profile-tabs {
 	margin: 1em auto !important;
+	font-size .9rem
 }
 
 .dm-profile-tabs__link
@@ -143,3 +138,6 @@ ul.dm-profile-activities,
 	margin-left: 0;
 	margin-bottom: 0;
 }
+
+.dm-profile-break
+	background-color wm_primary1 !important

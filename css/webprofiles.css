@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Barlow:400,700&display=swap");
 /* Directory customization */
 .faculty-card {
   background-color: #f5f5f5;
@@ -7,8 +8,6 @@
   width: 500px;
   border: 0.125em solid #b3b3b3;
   transition: border-color 100ms ease-in-out;
-  background-repeat: no-repeat;
-  background-size: contain;
   background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI4IiBoZWlnaHQ9IjE2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cGF0aCBmaWxsPSIjRTZFNkU2IiBkPSJNMCAwSDEyOFYxNjRIMHoiLz4KICA8cGF0aCBkPSJNNjQuMDY0NSA5NS40Mjg2Qzc4LjMzNDggOTUuNDI4NiA4OS45MDMyIDgzLjkxNTkgODkuOTAzMiA2OS43MTQzIDg5LjkwMzIgNTUuNTEyNyA3OC4zMzQ4IDQ0IDY0LjA2NDUgNDQgNDkuNzk0MiA0NCAzOC4yMjU4IDU1LjUxMjcgMzguMjI1OCA2OS43MTQzIDM4LjIyNTggODMuOTE1OSA0OS43OTQyIDk1LjQyODYgNjQuMDY0NSA5NS40Mjg2ek02NC4wNjQ1IDEwNEM0MC4yODA2IDEwNCAyMSAxMjMuMjgxIDIxIDE0Ny4wNjVWMTY0SDEwNy4xMjlWMTQ3LjA2NUMxMDcuMTI5IDEyMy4yODEgODcuODQ4NCAxMDQgNjQuMDY0NSAxMDR6IiBmaWxsPSIjMzMzIi8+Cjwvc3ZnPg==");
 }
 .faculty-card:hover {
@@ -43,20 +42,21 @@
 }
 .dm-profile-heading,
 .dm-profile-tabs__link {
-  font-family: "din-condensed-web", sans-serif;
+  font-family: 'Barlow', sans-serif;
   text-transform: uppercase;
 }
 .dm-profile-activities {
-  font-family: "Noto Serif", Georgia, serif !important;
+  font-family: 'Barlow', sans-serif;
   max-width: none !important;
 }
 .dm-profile-heading,
 .dm-profile-activities {
   color: #353b48;
+  margin-bottom: 1rem !important;
 }
 .dm-profile-section--static b {
   text-transform: uppercase;
-  font-family: "din-condensed-web", sans-serif;
+  font-family: 'Barlow', sans-serif;
 }
 .dm-profile-section--static b span {
   font-size: 2.5em !important;
@@ -70,6 +70,7 @@
 }
 .dm-profile-tabs {
   margin: 1em auto !important;
+  font-size: 0.9rem;
 }
 .dm-profile-tabs__link {
   font-size: 1.5em !important;
@@ -115,4 +116,7 @@ ul.dm-profile-activities,
 .dm-profile-activities li {
   margin-left: 0;
   margin-bottom: 0;
+}
+.dm-profile-break {
+  background-color: #575195 !important;
 }

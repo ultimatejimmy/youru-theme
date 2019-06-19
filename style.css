@@ -41,11 +41,12 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css?family=Barlow:400,700&display=swap");
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
 html {
-  font-family: sans-serif;
+  font-family: 'Barlow', sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
@@ -119,11 +120,11 @@ h1 {
   line-height: 1.4;
 }
 h2 {
-  font-size: 1.95em;
+  font-size: 1.7em;
   line-height: 1.4;
 }
 h3 {
-  font-size: 1.56em;
+  font-size: 1.4em;
   line-height: 1.4;
 }
 h4 {
@@ -260,7 +261,7 @@ select,
 optgroup,
 textarea {
   color: #444;
-  font-family: "Noto Serif", serif;
+  font-family: 'Barlow', sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.8;
@@ -273,9 +274,9 @@ h5,
 h6 {
   color: #32373c;
   clear: both;
-  font-family: "din-condensed-web", sans-serif;
+  font-family: 'Barlow', sans-serif;
   text-transform: uppercase;
-  font-weight: normal;
+  font-weight: 700;
 }
 .entry-header h1.entry-title {
   font-size: 2.44em;
@@ -560,7 +561,7 @@ header#masthead .wrapper #site-navigation {
   flex: 1 0 auto;
   background-color: #353b48;
   margin-top: -20px;
-  font-family: "din-condensed-web", sans-serif;
+  font-family: 'Barlow', sans-serif;
   font-size: 1.5em;
   text-transform: uppercase;
 }
@@ -653,7 +654,7 @@ header#masthead .wrapper #site-navigation ul .current-page-ancestor a::before {
 #colophon nav ul li a {
   padding: 15px 25px;
   color: #fff;
-  font-family: "din-condensed-web", sans-serif;
+  font-family: 'Barlow', sans-serif;
   font-size: 1.5em;
   text-decoration: none;
   text-transform: uppercase;
