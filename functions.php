@@ -134,45 +134,16 @@ function yourutheme_content_width() {
 }
 add_action( 'after_setup_theme', 'yourutheme_content_width', 0 );
 
-/**
- * Register Google Fonts
- */
-function yourutheme_fonts_url() {
-	$fonts_url = '';
 
-	/*
-	 *Translators: If there are characters in your language that are not
-	 * supported by Noto Serif, translate this to 'off'. Do not translate
-	 * into your own language.
-	 */
-	$notoserif = esc_html_x( 'on', 'Noto Serif font: on or off', 'yourutheme' );
-
-	if ( 'off' !== $notoserif ) {
-		$font_families = array();
-		$font_families[] = 'Noto Serif:400,400italic,700,700italic';
-
-		$query_args = array(
-			'family' => urlencode( implode( '|', $font_families ) ),
-			'subset' => urlencode( 'latin,latin-ext' ),
-		);
-
-		$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
-	}
-
-	return $fonts_url;
-
-}
 
 /**
  * Enqueue scripts and styles.
  */
 function yourutheme_scripts() {
-	wp_enqueue_style( 'gutenbergbase-style', get_template_directory_uri() . '/style.css', array(), filemtime(get_template_directory() . '/style.css?v=201906191'), 'all' );
+	wp_enqueue_style( 'gutenbergbase-style', get_template_directory_uri() . '/style.css', array(), filemtime(get_template_directory() . '/style.css?v=20190620'), 'all' );
 
-	wp_enqueue_style( 'youruthemeblocks-style', get_template_directory_uri() . '/css/blocks.css', array(), filemtime(get_template_directory() . '/css/blocks.css?v=20190619'), 'all' );
-	wp_enqueue_style( 'youru-profile', get_template_directory_uri() . '/css/webprofiles.css', array(), filemtime(get_template_directory() . '/css/webprofiles.css?v=201906192'), 'all' );
-
-	wp_enqueue_style( 'yourutheme-fonts', yourutheme_fonts_url() );
+	wp_enqueue_style( 'youruthemeblocks-style', get_template_directory_uri() . '/css/blocks.css', array(), filemtime(get_template_directory() . '/css/blocks.css?v=20190620'), 'all' );
+	wp_enqueue_style( 'youru-profile', get_template_directory_uri() . '/css/webprofiles.css', array(), filemtime(get_template_directory() . '/css/webprofiles.css?v=20190620'), 'all' );
 
 	wp_enqueue_script( 'yourutheme-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 

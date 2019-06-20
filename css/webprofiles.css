@@ -39,6 +39,12 @@
 .dm-profile-preamble .dm-profile-activities {
   background-color: #353b48 !important;
 }
+.dm-profile-preamble .dm-profile-heading {
+  color: #353b48 !important;
+}
+.dm-profile-preamble .dm-profile-section--main-image + .dm-profile-report-section {
+  padding: 1em !important;
+}
 #dm-web-profile-root {
   max-width: none;
 }
@@ -101,7 +107,7 @@
 .dm-profile-tabs__item {
   background-color: transparent !important;
   padding: 0 !important;
-  margin: 0 !important;
+  margin: 0 0 10px !important;
 }
 .dm-profile-tabs__item--active .dm-profile-tabs__link {
   background-color: #353b48;
