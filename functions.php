@@ -140,10 +140,10 @@ add_action( 'after_setup_theme', 'yourutheme_content_width', 0 );
  * Enqueue scripts and styles.
  */
 function yourutheme_scripts() {
-	wp_enqueue_style( 'gutenbergbase-style', get_template_directory_uri() . '/style.css', array(), filemtime(get_template_directory() . '/style.css?v=20190620'), 'all' );
+	wp_enqueue_style( 'gutenbergbase-style', get_template_directory_uri() . '/style.css', array(), filemtime(get_template_directory() . '/style.css'), 'all' );
 
-	wp_enqueue_style( 'youruthemeblocks-style', get_template_directory_uri() . '/css/blocks.css', array(), filemtime(get_template_directory() . '/css/blocks.css?v=20190620'), 'all' );
-	wp_enqueue_style( 'youru-profile', get_template_directory_uri() . '/css/webprofiles.css', array(), filemtime(get_template_directory() . '/css/webprofiles.css?v=20190620'), 'all' );
+	wp_enqueue_style( 'youruthemeblocks-style', get_template_directory_uri() . '/css/blocks.css', array(), filemtime(get_template_directory() . '/css/blocks.css'), 'all' );
+	wp_enqueue_style( 'youru-profile', get_template_directory_uri() . '/css/webprofiles.css', array(), filemtime(get_template_directory() . '/css/webprofiles.css'), 'all' );
 
 	wp_enqueue_script( 'yourutheme-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
